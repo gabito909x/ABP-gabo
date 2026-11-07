@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparativa tipografías</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&family=League+Spartan:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --paper: #f2efe9;
+        --ink: #111111;
+        --red: #d1202f;
+        --line: rgba(17,17,17,.2);
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Inter", sans-serif;
+        padding: 24px;
+      }
+
+      .wrap {
+        max-width: 1480px;
+        margin: 0 auto;
+      }
+
+      .encabezado {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        line-height: .9;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+      }
+
+      .mini {
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .14em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid var(--line);
+        min-height: 310px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card.red {
+        background: var(--red);
+        color: #fff;
+      }
+
+      .tag {
+        display: inline-block;
+        width: fit-content;
+        font-family: "Space Mono", monospace;
+        font-size: 10px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        padding: 6px 8px;
+        border: 1px solid currentColor;
+      }
+
+      .card.red .tag {
+        border-color: rgba(255,255,255,.7);
+      }
+
+      .tipo-principal {
+        margin: 18px 0 10px;
+        line-height: .9;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+
+      .small {
+        font-size: 0.82rem;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        max-width: 38ch;
+      }
+
+      .card.red .small {
+        color: rgba(255,255,255,.9);
+      }
+
+      .meta {
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid currentColor;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 10px;
+        font-family: "Space Mono", monospace;
+        text-transform: uppercase;
+      }
+
+      .combo-1 .tipo-principal { font-family: "Bebas Neue", sans-serif; font-size: clamp(3rem, 5vw, 5rem); }
+      .combo-1 .small { font-family: "Archivo", sans-serif; }
+
+      .combo-2 .tipo-principal { font-family: "Anton", sans-serif; font-size: clamp(2.8rem, 4.5vw, 4.4rem); }
+      .combo-2 .small { font-family: "Archivo", sans-serif; }
+
+      .combo-3 .tipo-principal { font-family: "Oswald", sans-serif; font-size: clamp(2.6rem, 4vw, 4.2rem); }
+      .combo-3 .small { font-family: "Inter", sans-serif; }
+
+      .combo-4 .tipo-principal { font-family: "League Spartan", sans-serif; font-size: clamp(2.8rem, 4.4vw, 4.8rem); }
+      .combo-4 .small { font-family: "Montserrat", sans-serif; }
+
+      .combo-5 .tipo-principal { font-family: "Montserrat", sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); }
+      .combo-5 .small { font-family: "Inter", sans-serif; }
+
+      .combo-6 .tipo-principal { font-family: "Anton", sans-serif; font-size: clamp(3rem, 4.8vw, 4.8rem); }
+      .combo-6 .small { font-family: "IBM Plex Mono", monospace; }
+
+      @media (max-width: 980px) {
+        .grid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+      }
+
+      @media (max-width: 640px) {
+        body { padding: 16px; }
+        .encabezado { flex-direction: column; align-items: start; }
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="encabezado">
+        <h1>6 sugerencias</h1>
+        <div class="mini">tipografías brutalistas / letras pequeñas</div>
+      </header>
+
+      <main class="grid">
+        <article class="card combo-1">
+          <div>
+            <span class="tag">01 / Bebas Neue</span>
+            <div class="tipo-principal">¿QUIÉN ME<br>INSPIRA?</div>
+            <p class="small">Muy impactante, perfecto para titulares grandes. Tiene mucha fuerza visual y se lee bien incluso en texto compacto.</p>
+          </div>
+          <div class="meta"><span>ideal</span><span>titulares</span></div>
+        </article>
+
+        <article class="card red combo-2">
+          <div>
+            <span class="tag">02 / Anton + Archivo</span>
+            <div class="tipo-principal">¿QUÉ<br>QUIERO?<br>LOGRAR?</div>
+            <p class="small">Más editorial y contundente. Tiene un aire más serio y clásico, muy bueno para frases pesadas y áreas con poco espacio.</p>
+          </div>
+          <div class="meta"><span>muy buena</span><span>brutal</span></div>
+        </article>
+
+        <article class="card combo-3">
+          <div>
+            <span class="tag">03 / Oswald</span>
+            <div class="tipo-principal">¿CÓMO SE<br>RELACIONA?</div>
+            <p class="small">Más limpia y moderna, pero aún muy poderosa. Funciona muy bien cuando quieres menos ruido visual y más claridad.</p>
+          </div>
+          <div class="meta"><span>equilibrio</span><span>clara</span></div>
+        </article>
+
+        <article class="card combo-4">
+          <div>
+            <span class="tag">04 / League Spartan</span>
+            <div class="tipo-principal">¿CUÁNDO<br>EMPEZÓ<br>TODO?</div>
+            <p class="small">Muy compacta y fuerte. Excelente para títulos cortos con muchas letras en poco espacio, sin perder legibilidad.</p>
+          </div>
+          <div class="meta"><span>compacta</span><span>fuerte</span></div>
+        </article>
+
+        <article class="card red combo-5">
+          <div>
+            <span class="tag">05 / Montserrat</span>
+            <div class="tipo-principal">¿QUÉ ME<br>ATRAJO?</div>
+            <p class="small">Más contemporánea y menos agresiva. Funciona bien si buscas una versión más elegante, aunque pierde un poco el carácter brutal.</p>
+          </div>
+          <div class="meta"><span>elegante</span><span>menos duro</span></div>
+        </article>
+
+        <article class="card combo-6">
+          <div>
+            <span class="tag">06 / Anton + Mono</span>
+            <div class="tipo-principal">¿QUIÉN ME<br>INSPIRA?</div>
+            <p class="small">Muy buena para elementos técnicos o de etiqueta, pero deja un toque más rígido. Ideal si quieres contrastar con la parte editorial.</p>
+          </div>
+          <div class="meta"><span>contrast</span><span>rígida</span></div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

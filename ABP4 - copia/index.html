@@ -1,0 +1,2111 @@
+<!doctype html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#0B1120">
+
+  <meta name="description" content="Proyecto de vida de Gabriel: programación, metas y sueños.">
+
+  <title>Mi proyecto de vida — Gabriel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="estilos.css">
+
+  <script src="textos.js" defer></script>
+
+  <script src="script.js" defer></script>
+
+
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+.porque-ruta-section {
+  --bg-primary: #0B1120;
+  --text-primary: #F1F5F9;
+  --text-muted: #94A3B8;
+  --border-color: #1E293B;
+  --bg-card: #111827;
+  --color-black: #F1F5F9;
+  --color-dark: #0B1120;
+  --color-gray-dark: #1E293B;
+  --color-gray-border: #1E293B;
+  --color-gray-subtle: #64748B;
+  --color-gray-light: #64748B;
+  --color-white: #0B1120;
+  --color-cream: #0B1120;
+  --color-cream-card: #111827;
+  --color-cream-border: #1E293B;
+  --color-red: #3B82F6;
+  --color-red-hover: #2563EB;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "Space Mono", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+  background-color: #111827;
+  color: #F1F5F9;
+  display: block;
+  padding: 2rem 0;
+}
+
+    /* Estilos específicos para Página 3: Fondo oscuro con alto contraste y tarjetas separadas */
+    .porque-ruta-section .reasons-header-area {
+      padding: 3.5rem 3rem 2.5rem 3rem;
+      border-bottom: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    /* Grid de tarjetas con espaciado real (gap) en lugar de pegadas */
+    .porque-ruta-section .cards-section-wrapper {
+      padding: 3rem;
+      border-bottom: 1px solid var(--border-color);
+      background-color: #111827;
+    }
+
+    .porque-ruta-section .flip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; /* Separación generosa */
+    }
+
+    /* Flip Card 3D container */
+    .porque-ruta-section .flip-card {
+      min-height: 480px;
+      height: 480px;
+      perspective: 1200px;
+      cursor: pointer;
+      position: relative;
+      outline: none;
+    }
+
+    .porque-ruta-section .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    /* Activación del flip */
+    .porque-ruta-section .flip-card.is-flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Lado Frontal y Lado Trasero */
+    .porque-ruta-section .flip-card-front, .flip-card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      border: 1px solid var(--border-color);
+      overflow-y: auto;
+    }
+
+    .porque-ruta-section .flip-card-front {
+      background-color: #111827;
+      color: #F1F5F9;
+      box-shadow: 0 2px 12px rgba(28, 23, 18, 0.04);
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .porque-ruta-section .flip-card:hover .flip-card-front {
+      border-color: #3B82F6;
+      transform: translateY(-4px);
+    }
+
+    .porque-ruta-section .flip-card-back {
+      background-color: #3B82F6;
+      color: #F1F5F9;
+      transform: rotateY(180deg);
+      border-color: #3B82F6;
+      box-shadow: 0 6px 24px rgba(184, 92, 42, 0.25);
+    }
+
+    .porque-ruta-section .card-index-big {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--color-red);
+    }
+
+    .porque-ruta-section .flip-card-back .card-index-big {
+      color: #F1F5F9;
+      opacity: 0.35;
+    }
+
+    .porque-ruta-section .front-visual {
+      width: 100%;
+      height: 100px;
+      margin: 1rem 0;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0F172A;
+    }
+
+    .porque-ruta-section .interactive-cue {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #64748B;
+      font-weight: 700;
+    }
+
+    .porque-ruta-section .title-card {
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+    .porque-ruta-section p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .porque-ruta-section .flip-card-back .interactive-cue {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      color: #F1F5F9;
+    }
+
+    /* Sección de Metas / Plan de vuelo */
+    .porque-ruta-section .vision-manifesto-section {
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      border-bottom: 1px solid var(--border-color);
+      background-color: #111827;
+      align-items: flex-start;
+    }
+
+    .porque-ruta-section .plan-block {
+      background-color: #111827;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid #3B82F6;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.75rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .porque-ruta-section .plan-block:hover {
+      border-color: #3B82F6;
+      border-left-color: #3B82F6;
+      transform: translateX(4px);
+    }
+
+    .porque-ruta-section .plan-block:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 1050px) {
+      .porque-ruta-section .flip-grid {
+        grid-template-columns: 1fr;
+      }
+      .porque-ruta-section .flip-card {
+        min-height: 440px;
+        height: 440px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .porque-ruta-section .reasons-header-area {
+        grid-template-columns: 1fr;
+        padding: 2.25rem 1.5rem;
+        gap: 1.75rem;
+      }
+      .porque-ruta-section .cards-section-wrapper {
+        padding: 1.75rem 1.25rem;
+      }
+      .porque-ruta-section .vision-manifesto-section {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.5rem;
+        gap: 2rem;
+      }
+      .porque-ruta-section .plan-block {
+        padding: 1.5rem;
+      }
+    }
+  
+.porque-ruta-section .btn-round-arrow {
+  width: 44px; height: 44px; min-width: 44px; border-radius: 50%;
+  border: 1px solid var(--border-color); background: transparent; color: inherit;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; text-decoration: none; transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer; user-select: none;
+}
+.porque-ruta-section .btn-round-arrow:hover {
+  background: var(--color-red); border-color: var(--color-red); color: var(--color-dark);
+  transform: scale(1.06) rotate(-45deg);
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+  <canvas id="fondo-particulas" aria-hidden="true"></canvas>
+
+  <div id="loader" aria-hidden="true">
+
+    <div class="loader-terminal mono">
+
+      <span class="terminal-punto" style="background:#ff5f57"></span>
+
+      <span class="terminal-punto" style="background:#febc2e"></span>
+
+      <span class="terminal-punto" style="background:#28c840"></span>
+
+      <span class="terminal-titulo">gabriel@proyecto-de-vida ~</span>
+
+    </div>
+
+    <div class="loader-contenido mono" id="loader-contenido">
+
+      <span class="loader-linea">$ npm run build</span>
+
+      <span class="loader-linea">> Compilando proyecto de vida...</span>
+
+      <span class="loader-linea">> Cargando 10 secciones...</span>
+
+      <span class="loader-linea">> Verificando accesibilidad...</span>
+
+      <span class="loader-linea loader-ok">✓ Todo listo. Bienvenido.</span>
+
+    </div>
+
+  </div>
+
+  <div id="barra-progreso" aria-hidden="true"></div>
+
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+
+
+  <!-- Menú fijo para navegar por las secciones del proyecto. -->
+
+  <header class="barra">
+
+    <a class="marca" href="#inicio" aria-label="Gabriel Sanchez, grado 11-A. Ir al inicio">
+
+      <span class="marca-nombre">GABRIEL<br>SANCHEZ<span>.</span></span>
+
+      <span class="marca-ficha"><span class="marca-grado">11-A</span><span class="marca-descriptor mono">PROYECTO<br>DE VIDA</span></span>
+
+    </a>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+
+      <a class="actual" href="#inicio" aria-current="location"><span class="nav-numero">00</span><span>Inicio</span></a>
+
+      <a href="#quien-soy"><span class="nav-numero">01</span><span>Quién soy</span></a>
+
+      <a href="#mi-carrera"><span class="nav-numero">02</span><span>Mi carrera</span></a>
+
+      <a href="#ruta-academica"><span class="nav-numero">02b</span><span>Mi ruta</span></a>
+
+      <a href="#por-que"><span class="nav-numero">03</span><span>Por qué</span></a>
+
+      <a href="#camino"><span class="nav-numero">04</span><span>Mi camino</span></a>
+
+      <a href="#realidad"><span class="nav-numero">05</span><span>La realidad</span></a>
+
+      <a href="#futuro"><span class="nav-numero">06</span><span>El futuro</span></a>
+
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
+
+    <button class="menu-movil" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir navegación">MENÚ <span>↘</span></button>
+
+  </header>
+
+
+
+  <main id="contenido">
+
+    <!-- Portada del proyecto. -->
+
+    <section class="portada pantalla" id="inicio" aria-labelledby="titulo-inicio">
+
+      <div class="portada-meta mono"><span>PROYECTO PERSONAL / 2025—∞</span><span>ARMENIA, QUINDÍO</span></div>
+
+      <p class="sobrelinea"><span class="punto"></span> UNA VIDA EN CONSTRUCCIÓN</p>
+
+      <h1 id="titulo-inicio">MI<br>PROYECTO<br><span style="color:var(--marca)">DE VIDA</span></h1>
+
+      <div class="portada-pie">
+
+        <p>Hola, soy Gabriel. Aquí cuento qué quiero hacer con mi vida y por qué.</p>
+
+        <a class="flecha" href="#quien-soy" aria-label="Ir a quién soy">→</a>
+
+      </div>
+
+
+
+      <!-- Terminal: momento wow -->
+
+      <div class="terminal" aria-label="Terminal que muestra las metas de Gabriel como código">
+
+        <div class="terminal-barra">
+
+          <span class="terminal-punto"></span>
+
+          <span class="terminal-punto"></span>
+
+          <span class="terminal-punto"></span>
+
+          <span class="terminal-titulo mono">gabriel@proyecto-de-vida ~</span>
+
+        </div>
+
+        <div class="terminal-contenido mono" id="terminal-contenido">
+
+          <span class="terminal-linea"><span class="terminal-prompt">$</span><span id="terminal-texto"></span><span class="terminal-cursor"></span></span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="portada-frase">
+
+        <span class="mono">UNA IDEA PARA SEGUIR</span>
+
+        <p>EL QUE NO SUEÑA<br><span>NUNCA PROGRESA.</span></p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 01: presentación personal en inglés. -->
+
+    <section class="seccion pantalla" id="quien-soy" aria-labelledby="titulo-quien">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">01</span>
+
+        <div><p class="sobrelinea">A QUICK INTRODUCTION</p><h2 id="titulo-quien">WHO<br>AM I<span style="color:var(--marca)">?</span></h2></div>
+
+        <p class="cabecera-nota">A little about<br>where I come from.</p>
+
+      </div>
+
+      <div class="quien-contenido">
+
+        <article class="tarjeta-identidad arrastrable" tabindex="0" aria-label="Tarjeta de presentación de Gabriel. Arrástrala para girarla.">
+
+          <div class="tarjeta-top mono"><span>STUDENT PROFILE</span><span>ARM / CO</span></div>
+
+          <div class="retrato textura" aria-hidden="true"><span>Gabo</span><i>NO PHOTO<br>NEEDED</i></div>
+
+
+
+          <div class="tarjeta-datos mono"><span>AGE <b>16</b></span><span>BASED IN <b>ARMENIA, Q.</b></span></div>
+
+          <span class="tarjeta-pista mono">DRAG TO ROTATE ↗</span>
+
+        </article>
+
+        <div class="perfil-texto">
+
+          <p class="entradilla" data-text="bioIntro">Hello. My name is Gabriel. I am 16 years old. I study Software Programming at SENA in Armenia, Quindío, Colombia. I want to become a good programmer and build useful things for people.</p>
+
+          <div class="perfil-grid">
+
+            <article><span class="mono">01 / MY STORY</span><p data-text="bioStory">I was born in Pijao, a small town in Quindío. I lived there for most of my life. In April 2025, I moved to Armenia to study and find new opportunities.</p></article>
+
+            <article><span class="mono">02 / WHAT I LIKE</span><p data-text="bioInterests">I like programming and technology very much. I listen to house music when I write code. It helps me focus. I also love basketball and I play when I have free time.</p></article>
+
+            <article><span class="mono">03 / MY STRENGTHS</span><p data-text="bioStrengths">I am creative, a good leader, optimistic and curious. I pay attention to small details. I work well with others and I do not give up easily when a problem is hard.</p></article>>
+
+            <article class="acento"><span class="mono">04 / SOMETHING UNIQUE</span><p data-text="bioUnique">I question, improve, and build things that help real people.</p></article>
+
+          </div>
+
+          <a class="flecha flecha-linea" href="#mi-carrera" aria-label="Ir a mi carrera">→</a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Demo: Hola Mundo en vivo -->
+
+      <div class="demo-hola" aria-label="Demo interactiva: tu primer programa">
+
+        <div class="demo-hola-header mono"><span>01b / TU PRIMER PROGRAMA</span><span>INTERACTIVO</span></div>
+
+        <div class="demo-hola-body">
+
+          <div class="demo-hola-input-wrap">
+
+            <label for="demo-nombre" class="mono">Escribe tu nombre:</label>
+
+            <input type="text" id="demo-nombre" class="demo-input" placeholder="Tu nombre..." maxlength="30" aria-label="Escribe tu nombre">
+
+            <button type="button" class="demo-btn" id="demo-ejecutar">Ejecutar código</button>
+
+          </div>
+
+          <div class="demo-hola-terminal">
+
+            <div class="terminal-barra">
+
+              <span class="terminal-punto"></span><span class="terminal-punto"></span><span class="terminal-punto"></span>
+
+              <span class="terminal-titulo mono">gabriel@demo ~</span>
+
+            </div>
+
+            <div class="terminal-contenido mono" id="demo-resultado">
+
+              <span class="terminal-linea"><span class="terminal-prompt">$</span> Esperando tu nombre...</span>
+
+            </div>
+
+          </div>
+
+          <div class="demo-hola-codigo">
+
+            <span class="mono">EL CÓDIGO QUE LO HACE:</span>
+
+            <pre class="codigo-bloque"><code><span class="kw">function</span> <span class="fn">saludar</span>(nombre) {
+
+  <span class="kw">return</span> <span class="str">"Hola, "</span> + nombre + <span class="str">"!"</span>;
+
+}
+
+<span class="fn">saludar</span>(<span class="str">"tu nombre"</span>); <span class="cm">// ← aquí entras tú</span></code></pre>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 02: formación, duración y oportunidades de la carrera. -->
+
+    <section class="seccion pantalla" id="mi-carrera" aria-labelledby="titulo-carrera">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">02</span>
+
+        <div><p class="sobrelinea">APRENDER PARA CREAR</p><h2 id="titulo-carrera">MI<br>CARRERA<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Desliza las tarjetas<br>para descubrir el camino.</p>
+
+      </div>
+
+      <div class="carrusel-wrap">
+
+        <div class="carrusel" tabindex="0" aria-label="Tarjetas sobre mi carrera. Desliza horizontalmente.">
+
+          <article class="carrera-card carrera-roja">
+
+            <span class="mono">01 / QUÉ ES</span><h3>CREAR<br>CON CÓDIGO.</h3>
+
+            <p>Técnico en Programación de Software desde grado 10 y después Tecnólogo en Análisis y Desarrollo de Software (ADSO) en el SENA. Aprendo a entender lo que necesita el cliente, diseñar sistemas y construir páginas web y aplicaciones.</p>
+
+            <b class="card-marca">ADSO</b>
+
+          </article>
+
+           <article class="carrera-card carrera-negra">
+
+             <span class="mono">02 / DURACIÓN Y MATERIAS</span><h3>27 MESES.<br>3.984 HORAS.</h3>
+
+             <p>El Tecnólogo ADSO dura 27 meses: 21 de etapa lectiva y 6 de etapa productiva. Se ven lenguajes de programación, bases de datos, desarrollo web y móvil, análisis de requisitos, diseño de sistemas, pruebas, metodologías ágiles como Scrum y Kanban e inglés técnico.</p>
+
+             <b class="card-marca">LEARN / BUILD / REPEAT</b>
+
+           </article>
+
+          <article class="carrera-card carrera-puntos">
+
+            <span class="mono">03 / PARA ENTRAR</span><h3>LOS<br>REQUISITOS.</h3>
+
+            <p>Terminar el grado 11, presentar los resultados de las pruebas Saber 11, pasar la prueba de admisión del SENA, ser mayor de 14 años y tener conocimientos básicos de informática.</p>
+
+            <b class="card-marca">NEXT STEP →</b>
+
+          </article>
+
+          <article class="carrera-card carrera-blanca">
+
+            <span class="mono">04 / LO QUE HAY QUE TENER</span><h3>LÓGICA +<br>CURIOSIDAD.</h3>
+
+            <p>Ganas de aprender tecnología, creatividad para resolver problemas, responsabilidad y saber trabajar en equipo.</p>
+
+            <b class="card-marca">MINDSET</b>
+
+          </article>
+
+          <article class="carrera-card carrera-roja">
+
+            <span class="mono">05 / DÓNDE TRABAJAR</span><h3>DE<br>MUCHAS<br>FORMAS.</h3>
+
+            <p>En empresas de software, creando páginas web y diseñando interfaces, desde casa o montando mi propio negocio.</p>
+
+            <b class="card-marca">MAKE IT REAL</b>
+
+          </article>
+
+        </div>
+
+        <div class="carrusel-pie mono"><span>← ARRASTRA O DESLIZA →</span><span>01 — 05</span></div>
+
+      </div>
+
+
+
+      <!-- Demo: Código que se escribe solo -->
+
+      <div class="demo-typewriter" aria-label="Demo: código que se escribe solo">
+
+        <div class="demo-typewriter-header mono"><span>02b / CÓDIGO QUE COBRA VIDA</span><span>SCROLL PARA VER</span></div>
+
+        <div class="demo-typewriter-body">
+
+          <div class="demo-typewriter-code">
+
+            <div class="terminal-barra">
+
+              <span class="terminal-punto"></span><span class="terminal-punto"></span><span class="terminal-punto"></span>
+
+              <span class="terminal-titulo mono">mi-primer-programa.js</span>
+
+            </div>
+
+            <pre class="codigo-bloque" id="typewriter-code"><code></code></pre>
+
+          </div>
+
+          <div class="demo-typewriter-result" id="typewriter-result">
+
+            <span class="mono">RESULTADO:</span>
+
+            <div class="typewriter-output" id="typewriter-output">_</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 02b: Mi ruta académica detallada -->
+
+    <section class="seccion pantalla" id="ruta-academica" aria-labelledby="titulo-ruta-acad">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">02b</span>
+
+        <div><p class="sobrelinea">DE DÓNDE VENGO Y HACIA DÓNDE VOY</p><h2 id="titulo-ruta-acad">MI RUTA<br>ACADÉMICA<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Con logos, duración<br>y costos reales.</p>
+
+      </div>
+
+
+
+      <!-- Ruta académica: grid uniforme, fácil de exponer -->
+
+      <div class="ruta-grid">
+
+        <article class="ruta-acad-card">
+
+          <header class="ruta-acad-card-head">
+
+            <span class="mono ruta-acad-card-badge ruta-badge-ok">01 / COMPLETADO</span>
+
+            <span class="mono ruta-acad-card-fecha">2025</span>
+
+          </header>
+
+          <img class="ruta-acad-card-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg" alt="Logo del SENA" width="48" height="48" onerror="this.style.display='none'">
+
+          <h3 class="ruta-acad-card-titulo">TÉCNICO EN<br>PROGRAMACIÓN<br>DE SOFTWARE.</h3>
+
+          <dl class="ruta-acad-card-datos">
+
+            <div><dt>Institución</dt><dd>SENA — CCIT, Regional Quindío, Armenia</dd></div>
+
+            <div><dt>Modalidad</dt><dd>Presencial dentro del bachillerato</dd></div>
+
+            <div><dt>Duración</dt><dd>2 años (grado 10 y 11)</dd></div>
+
+            <div><dt>Costo</dt><dd>Gratuito</dd></div>
+
+            <div><dt>Título</dt><dd>27 de noviembre de 2026</dd></div>
+
+          </dl>
+
+          <b class="card-marca ruta-acad-card-marca">GRADO 10—11 · 2025—2026</b>
+
+        </article>
+
+
+
+        <article class="ruta-acad-card">
+
+          <header class="ruta-acad-card-head">
+
+            <span class="mono ruta-acad-card-badge ruta-badge-proximo">02 / PRÓXIMO</span>
+
+            <span class="mono ruta-acad-card-fecha">2027 — 2029</span>
+
+          </header>
+
+          <img class="ruta-acad-card-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg" alt="Logo del SENA" width="48" height="48" onerror="this.style.display='none'">
+
+          <h3 class="ruta-acad-card-titulo">TECNÓLOGO EN<br>ANÁLISIS Y<br>DESARROLLO DE SOFTWARE.</h3>
+
+          <dl class="ruta-acad-card-datos">
+
+            <div><dt>Institución</dt><dd>SENA — CCIT, Regional Quindío, Armenia</dd></div>
+
+            <div><dt>Modalidad</dt><dd>Presencial o virtual</dd></div>
+
+            <div><dt>Duración</dt><dd>27 meses (21 lectiva + 6 productiva)</dd></div>
+
+            <div><dt>Costo</dt><dd>Gratuito</dd></div>
+
+            <div><dt>Aprenderé</dt><dd>Web, móvil, bases de datos, Scrum/Kanban, inglés técnico</dd></div>
+
+          </dl>
+
+          <b class="card-marca ruta-acad-card-marca">2027 — 2029</b>
+
+        </article>
+
+
+
+        <article class="ruta-acad-card">
+
+          <header class="ruta-acad-card-head">
+
+            <span class="mono ruta-acad-card-badge ruta-badge-futuro">03 / FUTURO</span>
+
+            <span class="mono ruta-acad-card-fecha">2029 — 2033</span>
+
+          </header>
+
+          <img class="ruta-acad-card-logo" src="https://www.eam.edu.co/servidor_media/logoeam.svg" alt="Logo de la EAM" width="120" height="56" onerror="this.style.display='none'">
+
+          <h3 class="ruta-acad-card-titulo">INGENIERÍA<br>DE SOFTWARE.</h3>
+
+          <dl class="ruta-acad-card-datos">
+
+            <div><dt>Institución</dt><dd>Institución Universitaria EAM, Armenia</dd></div>
+
+            <div><dt>Modalidad</dt><dd>Presencial (diurno o nocturno)</dd></div>
+
+            <div><dt>Duración</dt><dd>8 semestres (4 años)</dd></div>
+
+            <div><dt>Costo</dt><dd>Privada · ~$4.449.000/semestre</dd></div>
+
+            <div><dt>Aprenderé</dt><dd>Arquitectura, nube, gestión de proyectos</dd></div>
+
+          </dl>
+
+          <b class="card-marca ruta-acad-card-marca">2029 — 2033</b>
+
+        </article>
+
+
+
+        <article class="ruta-acad-card">
+
+          <header class="ruta-acad-card-head">
+
+            <span class="mono ruta-acad-card-badge ruta-badge-futuro">04 / FUTURO</span>
+
+            <span class="mono ruta-acad-card-fecha">2033+</span>
+
+          </header>
+
+          <img class="ruta-acad-card-logo" src="https://www.eam.edu.co/servidor_media/logoeam.svg" alt="Logo de la EAM" width="120" height="56" onerror="this.style.display='none'">
+
+          <h3 class="ruta-acad-card-titulo">ESPECIALIZACIÓN<br>EN UX/UI O<br>CALIDAD DE SOFTWARE.</h3>
+
+          <dl class="ruta-acad-card-datos">
+
+            <div><dt>Institución</dt><dd>Institución Universitaria EAM, Armenia</dd></div>
+
+            <div><dt>Modalidad</dt><dd>Presencial</dd></div>
+
+            <div><dt>Duración</dt><dd>2 semestres (1 año)</dd></div>
+
+            <div><dt>Costo</dt><dd>Privada · ~$4.449.000/semestre</dd></div>
+
+            <div><dt>Opciones</dt><dd>UX/UI, Calidad de Software, Analítica de Datos</dd></div>
+
+          </dl>
+
+          <b class="card-marca ruta-acad-card-marca">2033+</b>
+
+        </article>
+
+      </div>
+
+
+
+
+
+    </section>
+
+
+
+    <!-- 03: motivos para elegir esta carrera. -->
+
+    <section class="seccion pantalla" id="por-que" aria-labelledby="titulo-por-que">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">03</span>
+
+        <div><p class="sobrelinea">LA DECISIÓN TIENE UNA HISTORIA</p><h2 id="titulo-por-que">¿POR QUÉ<br>ELEGÍ ESTA<br>CARRERA<span style="color:var(--marca)">?</span></h2></div>
+
+      </div>
+
+      <div class="preguntas-grid">
+
+        <button class="flip-card" type="button" aria-pressed="false">
+
+          <span class="flip-interior"><span class="flip-cara pregunta"><span class="mono">01 / EL INICIO</span><strong>¿CUÁNDO<br>EMPEZÓ TODO?</strong><span class="flip-pista mono">TOCA PARA LEER ↗</span></span><span class="flip-cara respuesta" data-numero="01"><span class="mono">01 / EL INICIO</span><span>Empecé viendo videos y páginas, y me quedé pensando en todo lo que se puede crear con programación. Después hice solo un proyecto productivo del SENA que era para tres personas. Investigué cómo funcionan los diseños, cómo se hacen y cómo mejorarlos.</span></span></span>
+
+        </button>
+
+        <button class="flip-card flip-roja" type="button" aria-pressed="false">
+
+          <span class="flip-interior"><span class="flip-cara pregunta"><span class="mono">02 / LO QUE ME LLAMÓ</span><strong>¿QUÉ ME<br>ATRAJO?</strong><span class="flip-pista mono">TOCA PARA LEER ↗</span></span><span class="flip-cara respuesta" data-numero="02"><span class="mono">02 / LO QUE ME LLAMÓ</span><span>Crear cosas que la gente usa de verdad y hacer páginas web con buen diseño.</span></span></span>
+
+        </button>
+
+        <button class="flip-card" type="button" aria-pressed="false">
+
+          <span class="flip-interior"><span class="flip-cara pregunta"><span class="mono">03 / MIS GUSTOS</span><strong>¿CÓMO SE<br>RELACIONA?</strong><span class="flip-pista mono">TOCA PARA LEER ↗</span></span><span class="flip-cara respuesta" data-numero="03"><span class="mono">03 / MIS GUSTOS</span><span>Me encanta el diseño; escucho house mientras programo y el baloncesto me apasiona.</span></span></span>
+
+        </button>
+
+        <button class="flip-card" type="button" aria-pressed="false">
+
+          <span class="flip-interior"><span class="flip-cara pregunta"><span class="mono">04 / MIS HABILIDADES</span><strong>¿QUÉ PUEDO<br>APORTAR?</strong><span class="flip-pista mono">TOCA PARA LEER ↗</span></span><span class="flip-cara respuesta" data-numero="04"><span class="mono">04 / MIS HABILIDADES</span><span>Creatividad, curiosidad, atención a los detalles y ganas de investigar hasta entender.</span></span></span>
+
+        </button>
+
+        <button class="flip-card" type="button" aria-pressed="false">
+
+          <span class="flip-interior"><span class="flip-cara pregunta"><span class="mono">05 / MI INSPIRACIÓN</span><strong>¿QUIÉN ME<br>INSPIRA?</strong><span class="flip-pista mono">TOCA PARA LEER ↗</span></span><span class="flip-cara respuesta" data-numero="05"><span class="mono">05 / MI INSPIRACIÓN</span><span>Mi mamá. Siempre me ha apoyado y quiero devolverle ese apoyo y hacer que se sienta orgullosa de mí.</span></span></span>
+
+        </button>
+
+        <button class="flip-card flip-roja" type="button" aria-pressed="false">
+
+          <span class="flip-interior"><span class="flip-cara pregunta"><span class="mono">06 / LO QUE ESPERO</span><strong>¿QUÉ QUIERO<br>LOGRAR?</strong><span class="flip-pista mono">TOCA PARA LEER ↗</span></span><span class="flip-cara respuesta" data-numero="06"><span class="mono">06 / LO QUE ESPERO</span><span>Vivir de lo que creo, tener una carrera sólida y sacar mis propios proyectos adelante.</span></span></span>
+
+        </button>
+
+      </div>
+
+      <p class="nota-interaccion mono">PULSA UNA TARJETA PARA VER LA RESPUESTA.</p>
+
+      <a class="flecha flecha-linea" href="#camino" aria-label="Ir a mi camino al futuro">→</a>
+
+    </section>
+
+
+
+    
+
+<!-- 03-por-que-ruta: tarjetas desde por-que.html -->
+
+<section class="cards-section-wrapper porque-ruta-section">
+
+    <main class="flip-grid">
+
+
+
+      <!-- Tarjeta 1: Capacidad de Creación -->
+
+      <div class="flip-card">
+
+        <div class="flip-card-inner">
+
+          <!-- Cara Frontal -->
+
+          <div class="flip-card-front">
+
+            <div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span class="card-index-big">01</span>
+
+                <span class="text-mono" style="color: #64748B;">CREACIÓN PURA</span>
+
+              </div>
+
+              
+
+              <div class="front-visual dot-texture-red">
+
+                <div class="hero-title" style="font-size: 1.6rem; color: #F1F5F9;">0 &rarr; 1 CÓDIGO</div>
+
+              </div>
+
+
+
+              <h2 class="title-card" style="margin-bottom: 0.85rem; color: #F1F5F9;">CREAR DESDE LA NADA</h2>
+
+              <p style="font-size: 1.02rem; color: #94A3B8; line-height: 1.65;">
+
+                La programación es la única disciplina donde con una computadora y lógica puedes crear herramientas que solucionen necesidades reales sin depender de materiales costosos.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="interactive-cue">
+
+              <span>[ CLIC PARA VOLTEAR ]</span>
+
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; font-size: 0.95rem;">↺</div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Cara Trasera -->
+
+          <div class="flip-card-back">
+
+            <div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span class="card-index-big">01</span>
+
+                <span class="text-mono" style="color: #F1F5F9; font-weight: 700;">MI ANÁLISIS</span>
+
+              </div>
+
+              <h3 class="title-card" style="margin: 1.5rem 0 1rem 0; color: #F1F5F9;">AUTONOMÍA Y PODER CREADOR</h3>
+
+              <p style="font-size: 1.02rem; line-height: 1.7; color: #F1F5F9;">
+
+                A diferencia de otras materias donde el aprendizaje es puramente teórico, en el SENA cada línea de código tiene un resultado visible en pantalla. Si diseño un sistema para que un negocio de Armenia controle sus ventas, puedo construirlo de inicio a fin con mis propias manos.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="interactive-cue">
+
+              <span>VOLVER AL FRENTE</span>
+
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; background: #fff; color: var(--color-red); font-size: 0.95rem;">↺</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tarjeta 2: Demanda y Futuro Real -->
+
+      <div class="flip-card">
+
+        <div class="flip-card-inner">
+
+          <!-- Cara Frontal -->
+
+          <div class="flip-card-front">
+
+            <div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span class="card-index-big">02</span>
+
+                <span class="text-mono" style="color: #64748B;">MERCADO ACTUAL</span>
+
+              </div>
+
+
+
+              <div class="front-visual dot-texture">
+
+                <div class="hero-title" style="font-size: 1.6rem; color: var(--color-red);">FUTURO LABORAL</div>
+
+              </div>
+
+
+
+              <h2 class="title-card" style="margin-bottom: 0.85rem; color: #F1F5F9;">DEMANDA REAL EN EL MERCADO</h2>
+
+              <p style="font-size: 1.02rem; color: #94A3B8; line-height: 1.65;">
+
+                El mundo funciona sobre software. El sector tecnológico cuenta con amplia demanda de desarrolladores bien capacitados, permitiendo trabajar de forma remota y con estabilidad.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="interactive-cue">
+
+              <span>[ CLIC PARA VOLTEAR ]</span>
+
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; font-size: 0.95rem;">↺</div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Cara Trasera -->
+
+          <div class="flip-card-back">
+
+            <div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span class="card-index-big">02</span>
+
+                <span class="text-mono" style="color: #F1F5F9; font-weight: 700;">MI PLAN</span>
+
+              </div>
+
+              <h3 class="title-card" style="margin: 1.5rem 0 1rem 0; color: #F1F5F9;">INDEPENDENCIA TEMPRANA</h3>
+
+              <p style="font-size: 1.02rem; line-height: 1.7; color: #F1F5F9;">
+
+                Tener el título técnico del SENA al terminar el colegio me abre las puertas a contratos de aprendizaje remunerados antes de los 18 años. Esto me permite financiar mi carrera universitaria en Ingeniería de Sistemas sin ser una carga económica para mi familia.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="interactive-cue">
+
+              <span>VOLVER AL FRENTE</span>
+
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; background: #fff; color: var(--color-red); font-size: 0.95rem;">↺</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tarjeta 3: Resolver Problemas Reales -->
+
+      <div class="flip-card">
+
+        <div class="flip-card-inner">
+
+          <!-- Cara Frontal -->
+
+          <div class="flip-card-front">
+
+            <div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span class="card-index-big">03</span>
+
+                <span class="text-mono" style="color: #64748B;">IMPACTO SOCIAL</span>
+
+              </div>
+
+
+
+              <div class="front-visual dot-texture-red">
+
+                <div class="hero-title" style="font-size: 1.6rem; color: #F1F5F9;">ARMENIA TI</div>
+
+              </div>
+
+
+
+              <h2 class="title-card" style="margin-bottom: 0.85rem; color: #F1F5F9;">RESOLVER PROBLEMAS EN EL QUINDÍO</h2>
+
+              <p style="font-size: 1.02rem; color: #94A3B8; line-height: 1.65;">
+
+                Aprender a programar enseña a pensar con método y lógica para descomponer dificultades complejas y crear soluciones aplicables a la vida cotidiana.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="interactive-cue">
+
+              <span>[ CLIC PARA VOLTEAR ]</span>
+
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; font-size: 0.95rem;">↺</div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Cara Trasera -->
+
+          <div class="flip-card-back">
+
+            <div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span class="card-index-big">03</span>
+
+                <span class="text-mono" style="color: #F1F5F9; font-weight: 700;">COMPROMISO</span>
+
+              </div>
+
+              <h3 class="title-card" style="margin: 1.5rem 0 1rem 0; color: #F1F5F9;">INNOVACIÓN REGIONAL</h3>
+
+              <p style="font-size: 1.02rem; line-height: 1.7; color: #F1F5F9;">
+
+                El Quindío es reconocido por el café y el turismo, pero necesita dar un salto tecnológico. Mi meta es aplicar el software para optimizar procesos agrícolas, comerciales y educativos en mi ciudad, demostrando el talento joven de nuestra región.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="interactive-cue">
+
+              <span>VOLVER AL FRENTE</span>
+
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; background: #fff; color: var(--color-red); font-size: 0.95rem;">↺</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+
+  </section>
+
+
+
+<!-- 03c: Mi primer error -->
+
+    <section class="seccion pantalla" id="primer-error" aria-labelledby="titulo-error">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">03c</span>
+
+        <div><p class="sobrelinea">APRENDER DE LOS ERRORES</p><h2 id="titulo-error">MI PRIMER<br>ERROR<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Fallar es parte<br>del proceso.</p>
+
+      </div>
+
+      <div class="carrusel-wrap">
+
+        <div class="carrusel" tabindex="0" aria-label="Tarjetas de mi primer error. Desliza horizontalmente.">
+
+          <article class="carrera-card carrera-negra">
+
+            <span class="mono">01 / EL ERROR</span>
+
+            <h3>LA PÁGINA SE ROMPIÓ<br>EN EL CELULAR.</h3>
+
+            <p>La primera página web que hice se veía perfecta en mi computador, pero en el celular todo se desordenaba: textos gigantes, imágenes fuera de lugar, botones imposibles de tocar.</p>
+
+            <b class="card-marca">FAIL → LEARN</b>
+
+          </article>
+
+          <article class="carrera-card carrera-roja">
+
+            <span class="mono">02 / LO QUE APRENDÍ</span>
+
+            <h3>PROGRAMAR ES<br>PROBAR EN TODOS LADOS.</h3>
+
+            <p>Descubrí que "funciona en mi máquina" no es suficiente. Aprendí sobre responsive design, media queries y a probar en diferentes dispositivos antes de decir "está listo".</p>
+
+            <b class="card-marca">RESPONSIVE</b>
+
+          </article>
+
+          <article class="carrera-card carrera-puntos">
+
+            <span class="mono">03 / EL RESULTADO</span>
+
+            <h3>AHORA PRUEBO<br>ANTES DE MOSTRAR.</h3>
+
+            <p>Ese error me enseñó que un buen programador no solo escribe código: verifica, prueba y corrige. Cada error es una lección que no se olvida.</p>
+
+            <b class="card-marca">TEST → SHIP</b>
+
+          </article>
+
+        </div>
+
+        <div class="carrusel-pie mono"><span>← ARRASTRA O DESLIZA →</span><span>01 — 03</span></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 03d: Mi compromiso -->
+
+    <section class="seccion pantalla" id="compromiso" aria-labelledby="titulo-compromiso">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">03d</span>
+
+        <div><p class="sobrelinea">LO QUE PROMETO HACER</p><h2 id="titulo-compromiso">MI<br>COMPROMISO<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Promesas con<br>fecha y medida.</p>
+
+      </div>
+
+      <div class="carrusel-wrap">
+
+        <div class="carrusel" tabindex="0" aria-label="Tarjetas de mi compromiso. Desliza horizontalmente.">
+
+          <article class="carrera-card carrera-roja">
+
+            <span class="mono">01 / COMPROMISO</span>
+
+            <h3>GRADUARME COMO<br>TÉCNICO.</h3>
+
+            <p>SENA · Armenia, Quindío · Programación de Software. Me gradúo el 27 de noviembre de 2026.</p>
+
+            <b class="card-marca">NOV 2025</b>
+
+          </article>
+
+          <article class="carrera-card carrera-negra">
+
+            <span class="mono">02 / COMPROMISO</span>
+
+            <h3>CONSEGUIR MI<br>PRIMER CLIENTE.</h3>
+
+            <p>Página web real para un negocio real. Demostrar que puedo crear valor para otros.</p>
+
+            <b class="card-marca">2026</b>
+
+          </article>
+
+          <article class="carrera-card carrera-blanca">
+
+            <span class="mono">03 / COMPROMISO</span>
+
+            <h3>PUBLICAR 1 PROYECTO<br>EN GITHUB POR MES.</h3>
+
+            <p>Portafolio visible y verificable. Cada proyecto es una prueba de mi progreso.</p>
+
+            <b class="card-marca">CONTINUO</b>
+
+          </article>
+
+          <article class="carrera-card carrera-puntos">
+
+            <span class="mono">04 / COMPROMISO</span>
+
+            <h3>GRADUARME COMO<br>INGENIERO DE SOFTWARE.</h3>
+
+            <p>Institución Universitaria EAM · 8 semestres por ciclos propedéuticos.</p>
+
+            <b class="card-marca">2029—2033</b>
+
+          </article>
+
+        </div>
+
+        <div class="carrusel-pie mono"><span>← ARRASTRA O DESLIZA →</span><span>01 — 04</span></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 03b: ¿Qué hace un programador? -->
+
+    <section class="seccion pantalla" id="que-hace" aria-labelledby="titulo-que-hace">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">03b</span>
+
+        <div><p class="sobrelinea">MÁS QUE ESCRIBIR CÓDIGO</p><h2 id="titulo-que-hace">¿QUÉ HACE<br>UN PROGRAMADOR<span style="color:var(--marca)">?</span></h2></div>
+
+        <p class="cabecera-nota">Toca cada tarea<br>para ver una demo.</p>
+
+      </div>
+
+      <div class="programador-grid">
+
+        <button class="programador-card" type="button" data-demo="analizar">
+
+          <span class="mono">01 / ANALIZAR</span>
+
+          <h3>ENTENDER<br>EL PROBLEMA.</h3>
+
+          <p>Antes de escribir código, un programador entiende qué necesita el usuario.</p>
+
+          <div class="programador-demo" id="demo-analizar">
+
+            <div class="demo-mini">
+
+              <span class="mono">PREGUNTA:</span>
+
+              <p>"¿Qué necesita un negocio para vender online?"</p>
+
+              <span class="mono">RESPUESTA:</span>
+
+              <p>Catálogo + carrito + pago + envío</p>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <button class="programador-card" type="button" data-demo="diseñar">
+
+          <span class="mono">02 / DISEÑAR</span>
+
+          <h3>PLANEAR<br>LA SOLUCIÓN.</h3>
+
+          <p>Dibuja cómo va a funcionar antes de construirla.</p>
+
+          <div class="programador-demo" id="demo-diseñar">
+
+            <div class="demo-mini">
+
+              <div class="demo-wireframe">
+
+                <div class="wf-header"></div>
+
+                <div class="wf-body">
+
+                  <div class="wf-sidebar"></div>
+
+                  <div class="wf-content"></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <button class="programador-card" type="button" data-demo="construir">
+
+          <span class="mono">03 / CONSTRUIR</span>
+
+          <h3>ESCRIBIR<br>EL CÓDIGO.</h3>
+
+          <p>Traduce el diseño en instrucciones que la máquina entiende.</p>
+
+          <div class="programador-demo" id="demo-construir">
+
+            <div class="demo-mini">
+
+              <button class="demo-btn-mini" id="demo-color-btn">Haz clic aquí</button>
+
+              <p id="demo-color-text" class="mono">El código puede cambiar colores, textos y más.</p>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <button class="programador-card" type="button" data-demo="probar">
+
+          <span class="mono">04 / PROBAR</span>
+
+          <h3>VERIFICAR<br>QUE FUNCIONE.</h3>
+
+          <p>Busca errores antes de que el usuario los encuentre.</p>
+
+          <div class="programador-demo" id="demo-probar">
+
+            <div class="demo-mini">
+
+              <div class="demo-test">
+
+                <span class="mono">TEST 1:</span> <span class="test-ok">✓ PASA</span><br>
+
+                <span class="mono">TEST 2:</span> <span class="test-ok">✓ PASA</span><br>
+
+                <span class="mono">TEST 3:</span> <span class="test-fail">✗ FALLA</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <button class="programador-card" type="button" data-demo="mejorar">
+
+          <span class="mono">05 / MEJORAR</span>
+
+          <h3>HACERLO<br>MEJOR.</h3>
+
+          <p>Un buen programador nunca termina: siempre hay algo que mejorar.</p>
+
+          <div class="programador-demo" id="demo-mejorar">
+
+            <div class="demo-mini">
+
+              <div class="demo-progress-bar">
+
+                <div class="demo-progress-fill" id="demo-progress"></div>
+
+              </div>
+
+              <span class="mono" id="demo-progress-label">Versión 1.0</span>
+
+            </div>
+
+          </div>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 04: metas de corto, mediano y largo plazo. -->
+
+    <section class="seccion pantalla" id="camino" aria-labelledby="titulo-camino">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">04</span>
+
+        <div><p class="sobrelinea">PASO A PASO, CON DIRECCIÓN</p><h2 id="titulo-camino">MI CAMINO<br>AL FUTURO<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Mis metas se construyen<br>con cada paso.</p>
+
+      </div>
+
+      <div class="linea-tiempo">
+
+        <div class="linea-base" aria-hidden="true"><span class="linea-progreso"></span></div>
+
+        <article class="meta meta-uno">
+
+          <button class="meta-cabecera" type="button" aria-expanded="false">
+
+            <span class="meta-resumen"><span class="meta-numero">01</span><span class="meta-tiempo mono">2025—2027</span></span>
+
+            <strong>CORTO<br>PLAZO<span style="color:var(--marca)">.</span></strong><span class="meta-signo" aria-hidden="true">+</span>
+
+          </button>
+
+          <div class="meta-detalle"><ul><li>Graduarme como Técnico en Programación de Software el 27 de noviembre.</li><li>Inscribirme al Tecnólogo ADSO en el SENA para 2027.</li><li>Conseguir mi primer cliente de páginas web.</li><li>Certificarme en algo corto, como Scrum o inglés técnico.</li><li>Tener un portafolio de proyectos en GitHub.</li></ul></div>
+
+        </article>
+
+        <article class="meta meta-dos">
+
+          <button class="meta-cabecera" type="button" aria-expanded="false">
+
+            <span class="meta-resumen"><span class="meta-numero">02</span><span class="meta-tiempo mono">2027—2031</span></span>
+
+            <strong>MEDIANO<br>PLAZO<span style="color:var(--marca)">.</span></strong><span class="meta-signo" aria-hidden="true">+</span>
+
+          </button>
+
+          <div class="meta-detalle"><ul><li>Completar el Tecnólogo ADSO (27 meses: 21 lectiva + 6 productiva).</li><li>Graduarme como Ingeniero de Software en la EAM (8 semestres por ciclos propedéuticos).</li><li>Tener clientes freelance fijos y trabajar como desarrollador junior.</li><li>Trabajar remotamente para una empresa de Estados Unidos.</li></ul></div>
+
+        </article>
+
+        <article class="meta meta-tres">
+
+          <button class="meta-cabecera" type="button" aria-expanded="false">
+
+            <span class="meta-resumen"><span class="meta-numero">03</span><span class="meta-tiempo mono">2030+</span></span>
+
+            <strong>LARGO<br>PLAZO<span style="color:var(--marca)">.</span></strong><span class="meta-signo" aria-hidden="true">+</span>
+
+          </button>
+
+          <div class="meta-detalle"><p>Especializarme en la EAM en Diseño de Experiencia e Interfaz de Usuario, Calidad de Software, inteligencia artificial o ciberseguridad. Crear mi propia empresa de software en el Quindío.</p></div>
+
+        </article>
+
+      </div>
+
+      <p class="nota-interaccion mono">PULSA CADA META PARA VER LOS PASOS.</p>
+
+    </section>
+
+
+
+    <!-- 04c: Ruta horizontal (scroll lateral) -->
+
+    <section class="seccion pantalla" id="ruta-horizontal" aria-labelledby="titulo-rh">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">04c</span>
+
+        <div><p class="sobrelinea">UNA RUTA QUE SE RECORRE</p><h2 id="titulo-rh">MI RUTA<br>VISUAL<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Desliza<br>para avanzar.</p>
+
+      </div>
+
+      <div class="ruta-scroll" id="ruta-scroll">
+
+        <div class="ruta-track">
+
+          <div class="ruta-card">
+
+            <span class="mono">01 / NOV 2025</span>
+
+            <h3>TÉCNICO<br>EN PROGRAMACIÓN.</h3>
+
+            <p>Me gradúo como Técnico en Programación de Software el 27 de noviembre. Estudié desde grado 10 en el SENA.</p>
+
+          </div>
+
+          <div class="ruta-card">
+
+            <span class="mono">02 / 2027—2029</span>
+
+            <h3>TECNÓLOGO<br>ADSO.</h3>
+
+            <p>27 meses, 3.984 horas. 21 meses lectiva + 6 productiva. Bases de datos, web, móvil, Scrum, Kanban, inglés técnico.</p>
+
+          </div>
+
+          <div class="ruta-card">
+
+            <span class="mono">03 / 2029—2033</span>
+
+            <h3>INGENIERO<br>DE SOFTWARE.</h3>
+
+            <p>8 semestres en la EAM por ciclos propedéuticos (5 tecnólogo + 3 universitario). Presencial en Armenia.</p>
+
+          </div>
+
+          <div class="ruta-card">
+
+            <span class="mono">04 / 2030+</span>
+
+            <h3>ESPECIALISTA<br>EN UX/UI.</h3>
+
+            <p>Diseño de experiencia, calidad de software, IA o ciberseguridad. La EAM ofrece estas especializaciones (2 semestres).</p>
+
+          </div>
+
+          <div class="ruta-card">
+
+            <span class="mono">05 / FUTURO</span>
+
+            <h3>MI PROPIA<br>EMPRESA.</h3>
+
+            <p>Equipo de confianza, clientes internacionales, impacto en el Quindío.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 04b: Mi primer programa (historia animada) -->
+
+    <section class="seccion pantalla" id="primer-programa" aria-labelledby="titulo-primer">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">04b</span>
+
+        <div><p class="sobrelinea">CÓMO EMPIEZA TODO</p><h2 id="titulo-primer">MI PRIMER<br>PROGRAMA<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Paso a paso,<br>como un commit.</p>
+
+      </div>
+
+      <div class="primer-programa-grid">
+
+        <div class="primer-paso" data-paso="1">
+
+          <span class="mono">PASO 01</span>
+
+          <h3>PANTALLA<br>EN BLANCO.</h3>
+
+          <p>Todo empieza con una página vacía. Solo HTML, sin estilo, sin vida.</p>
+
+          <div class="primer-demo primer-demo-1">
+
+            <div class="demo-blank"></div>
+
+          </div>
+
+        </div>
+
+        <div class="primer-paso" data-paso="2">
+
+          <span class="mono">PASO 02</span>
+
+          <h3>APARECE<br>EL TEXTO.</h3>
+
+          <p>Con una línea de HTML, aparece contenido en la pantalla.</p>
+
+          <div class="primer-demo primer-demo-2">
+
+            <div class="demo-text">&lt;h1&gt;Hola, mundo&lt;/h1&gt;</div>
+
+          </div>
+
+        </div>
+
+        <div class="primer-paso" data-paso="3">
+
+          <span class="mono">PASO 03</span>
+
+          <h3>LE DAMOS<br>COLOR.</h3>
+
+          <p>Con CSS, el texto gris se vuelve terracota, el fondo se vuelve papel.</p>
+
+          <div class="primer-demo primer-demo-3">
+
+            <div class="demo-color">Hola, mundo</div>
+
+          </div>
+
+        </div>
+
+        <div class="primer-paso" data-paso="4">
+
+          <span class="mono">PASO 04</span>
+
+          <h3>SE VUELVE<br>INTERACTIVO.</h3>
+
+          <p>Con JavaScript, el texto responde cuando haces clic.</p>
+
+          <div class="primer-demo primer-demo-4">
+
+            <button class="demo-btn-mini" id="demo-primer-btn">Haz clic</button>
+
+            <p id="demo-primer-text" class="mono">Esperando...</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 05: realidad laboral y salarios aproximados. -->
+
+    <section class="seccion pantalla" id="realidad" aria-labelledby="titulo-realidad">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">05</span>
+
+        <div><p class="sobrelinea">EXPECTATIVAS CON LOS PIES EN LA TIERRA</p><h2 id="titulo-realidad">LA REALIDAD<br>DE MI PROFESIÓN<span style="color:var(--marca)">.</span></h2></div>
+
+      </div>
+
+      <div class="salario-panel">
+
+        <div class="salario-intro">
+
+          <span class="mono">INGRESOS APROXIMADOS / COLOMBIA</span>
+
+          <h3>¿CUÁNTO<br>SE <span> GANA?</span></h3>
+
+          <p>Cifras mensuales aproximadas. El salario cambia según la experiencia, la ciudad y el tipo de trabajo.</p>
+
+        </div>
+
+        <div class="salario-datos">
+
+          <div class="niveles" role="group" aria-label="Selecciona el nivel de estudio">
+
+            <button class="nivel activo" type="button" data-nivel="tecnico" aria-pressed="true">TÉCNICO</button>
+
+            <button class="nivel" type="button" data-nivel="tecnologo" aria-pressed="false">TECNÓLOGO</button>
+
+            <button class="nivel" type="button" data-nivel="profesional" aria-pressed="false">PROFESIONAL</button>
+
+            <button class="nivel" type="button" data-nivel="especialista" aria-pressed="false">ESPECIALISTA</button>
+
+          </div>
+
+          <div class="sueldo" aria-live="polite">
+
+            <span class="mono">MILLONES DE PESOS / MES</span>
+
+            <strong data-sueldo>$1,3—2,4</strong>
+
+            <div class="barra-sueldo" aria-hidden="true"><span></span></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="nota-datos mono">CIFRAS ORIENTATIVAS; PUEDEN CAMBIAR SEGÚN EL MERCADO Y LA EXPERIENCIA.</p>
+
+      <div class="realidad-grid">
+
+        <article><span class="mono">01 / OPORTUNIDADES</span><h3>UN CAMPO<br>EN MOVIMIENTO.</h3><p>Empresas de software en Armenia y trabajo remoto para empresas en Colombia o en otros países.</p></article>
+
+        <article><span class="mono">02 / DÓNDE</span><h3>DESDE<br>QUINDÍO.</h3><p>En Armenia, Bogotá o Medellín, o desde casa para empresas de afuera.</p></article>
+
+        <article class="realidad-roja"><span class="mono">03 / RETOS</span><h3>COMPETIR<br>Y APRENDER.</h3><p>Hay competencia por los empleos y el inglés es clave para crecer en esta profesión.</p></article>
+
+        <article><span class="mono">04 / LO QUE VIENE</span><h3>HABILIDADES<br>DEL FUTURO.</h3><p>Inglés técnico, programación, inteligencia artificial y ciberseguridad.</p></article>
+
+        <article><span class="mono">05 / EMPRESAS</span><h3>POR<br>CONOCER.</h3><p>Quiero conocer empresas locales de software. Confirmaré sus nombres antes de publicarlos.</p></article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 05b: Antes / Después (slider) -->
+
+    <section class="seccion pantalla" id="antes-despues" aria-labelledby="titulo-ad">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">05b</span>
+
+        <div><p class="sobrelinea">EL VALOR DE PROGRAMAR</p><h2 id="titulo-ad">ANTES<br>Y DESPUÉS<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Arrastra para<br>ver la diferencia.</p>
+
+      </div>
+
+      <div class="ad-slider" id="ad-slider">
+
+        <div class="ad-panel ad-antes">
+
+          <span class="mono ad-label">SIN CÓDIGO</span>
+
+          <div class="ad-content">
+
+            <div class="ad-lista-caos">
+
+              <p>✗ Lista de tareas en papel</p>
+
+              <p>✗ Tachones y correcciones</p>
+
+              <p>✗ Se pierde la información</p>
+
+              <p>✗ No se puede compartir</p>
+
+              <p>✗ No se puede buscar</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="ad-panel ad-despues">
+
+          <span class="mono ad-label">CON CÓDIGO</span>
+
+          <div class="ad-content">
+
+            <div class="ad-app">
+
+              <div class="ad-app-header">Mis tareas</div>
+
+              <div class="ad-app-item"><input type="checkbox" checked> Estudiar programación</div>
+
+              <div class="ad-app-item"><input type="checkbox"> Hacer ejercicio</div>
+
+              <div class="ad-app-item"><input type="checkbox" checked> Leer un libro</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="ad-handle" id="ad-handle">
+
+          <div class="ad-handle-line"></div>
+
+          <div class="ad-handle-circle">↔</div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 05c: Terminal vs Visual -->
+
+    <section class="seccion pantalla" id="terminal-visual" aria-labelledby="titulo-tv">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">05c</span>
+
+        <div><p class="sobrelinea">CÓDIGO Y RESULTADO</p><h2 id="titulo-tv">TERMINAL<br>VS VISUAL<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Clic en un comando<br>y ve el resultado.</p>
+
+      </div>
+
+      <div class="tv-grid">
+
+        <div class="tv-terminal">
+
+          <div class="terminal-barra">
+
+            <span class="terminal-punto"></span><span class="terminal-punto"></span><span class="terminal-punto"></span>
+
+            <span class="terminal-titulo mono">gabriel@demo ~</span>
+
+          </div>
+
+          <div class="tv-commands">
+
+            <button class="tv-cmd activo" data-cmd="color" type="button">$ cambiar-color azul</button>
+
+            <button class="tv-cmd" data-cmd="texto" type="button">$ cambiar-texto "Hola"</button>
+
+            <button class="tv-cmd" data-cmd="tamaño" type="button">$ cambiar-tamaño grande</button>
+
+            <button class="tv-cmd" data-cmd="ocultar" type="button">$ ocultar-elemento</button>
+
+          </div>
+
+        </div>
+
+        <div class="tv-visual" id="tv-visual">
+
+          <div class="tv-box" id="tv-box">
+
+            <p id="tv-text">Soy un elemento visual</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 05d: Código vs Resultado (split view) -->
+
+    <section class="seccion pantalla" id="codigo-resultado" aria-labelledby="titulo-cr">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">05d</span>
+
+        <div><p class="sobrelinea">PROGRAMAR ES ESCRIBIR Y VER</p><h2 id="titulo-cr">CÓDIGO<br>VS RESULTADO<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Edita el código<br>y ve el resultado.</p>
+
+      </div>
+
+      <div class="cr-grid">
+
+        <div class="cr-code">
+
+          <div class="terminal-barra">
+
+            <span class="terminal-punto"></span><span class="terminal-punto"></span><span class="terminal-punto"></span>
+
+            <span class="terminal-titulo mono">editor.html</span>
+
+          </div>
+
+          <textarea class="cr-textarea" id="cr-input" spellcheck="false">&lt;h1 style="color: #B85C2A;"&gt;Hola, soy Gabriel&lt;/h1&gt;
+
+&lt;p&gt;Estudio programación en el SENA&lt;/p&gt;
+
+&lt;button&gt;Haz clic&lt;/button&gt;</textarea>
+
+        </div>
+
+        <div class="cr-preview">
+
+          <div class="terminal-barra">
+
+            <span class="terminal-punto"></span><span class="terminal-punto"></span><span class="terminal-punto"></span>
+
+            <span class="terminal-titulo mono">resultado</span>
+
+          </div>
+
+          <div class="cr-output" id="cr-output"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- 06: tablero de sueños interactivo y mensaje final. -->
+
+    <section class="seccion pantalla" id="futuro" aria-labelledby="titulo-futuro">
+
+      <div class="cabecera-seccion">
+
+        <span class="numero mono">06</span>
+
+        <div><p class="sobrelinea">UNA IMAGEN PARA SEGUIR AVANZANDO</p><h2 id="titulo-futuro">CÓMO ME<br>IMAGINO<span style="color:var(--marca)">.</span></h2></div>
+
+        <p class="cabecera-nota">Un futuro que quiero<br>construir y compartir.</p>
+
+      </div>
+
+      <div class="futuro-intro">
+
+        <p>Estos sueños me recuerdan por qué vale la pena aprender, crear y seguir adelante.</p>
+
+        <span class="mono">ARRASTRA PARA MOVER / TOCA PARA ACERCAR</span>
+
+      </div>
+
+      <div class="tablero" aria-label="Tablero interactivo de sueños">
+
+        <article class="sueño sueño-empresa" tabindex="0">
+
+          <svg class="sueño-imagen" viewBox="0 0 100 100" aria-hidden="true" style="filter:none; background:#0F172A;">
+            <rect x="18" y="28" width="64" height="62" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+            <polygon points="18,28 50,10 82,28" fill="#3B82F6"/>
+            <rect x="26" y="38" width="10" height="10" fill="#06B6D4"/>
+            <rect x="42" y="38" width="10" height="10" fill="#06B6D4"/>
+            <rect x="58" y="38" width="10" height="10" fill="#06B6D4"/>
+            <rect x="26" y="54" width="10" height="10" fill="#06B6D4"/>
+            <rect x="42" y="54" width="10" height="10" fill="#06B6D4"/>
+            <rect x="58" y="54" width="10" height="10" fill="#06B6D4"/>
+            <rect x="26" y="70" width="10" height="10" fill="#06B6D4"/>
+            <rect x="58" y="70" width="10" height="10" fill="#06B6D4"/>
+            <rect x="42" y="70" width="16" height="20" fill="#06B6D4"/>
+            <rect x="28" y="20" width="44" height="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1"/>
+            <text x="50" y="26" font-size="5" fill="#06B6D4" text-anchor="middle" font-family="monospace">EMPRESA</text>
+          </svg>
+
+          <span class="mono">01 / CREAR</span><h3>MI EMPRESA.</h3>
+
+          <p>Tener mi propia empresa de software y un equipo en el que confíe.</p>
+
+        </article>
+
+        <article class="sueño sueño-remoto" tabindex="0">
+
+          <svg class="sueño-imagen" viewBox="0 0 100 100" aria-hidden="true" style="filter:none; background:#0F172A;">
+            <rect x="22" y="48" width="56" height="38" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+            <polygon points="22,48 50,22 78,48" fill="#3B82F6"/>
+            <rect x="62" y="28" width="8" height="14" fill="#64748B"/>
+            <rect x="42" y="62" width="16" height="24" fill="#06B6D4"/>
+            <circle cx="55" cy="74" r="1.5" fill="#F1F5F9"/>
+            <rect x="28" y="56" width="12" height="12" fill="#06B6D4"/>
+            <line x1="34" y1="56" x2="34" y2="68" stroke="#1E293B" stroke-width="1"/>
+            <line x1="28" y1="62" x2="40" y2="62" stroke="#1E293B" stroke-width="1"/>
+            <rect x="60" y="56" width="12" height="12" fill="#06B6D4"/>
+            <line x1="66" y1="56" x2="66" y2="68" stroke="#1E293B" stroke-width="1"/>
+            <line x1="60" y1="62" x2="72" y2="62" stroke="#1E293B" stroke-width="1"/>
+            <rect x="30" y="88" width="40" height="4" fill="#64748B"/>
+            <rect x="34" y="80" width="32" height="8" fill="#1E293B" stroke="#3B82F6" stroke-width="1"/>
+            <rect x="36" y="82" width="28" height="4" fill="#06B6D4"/>
+            <circle cx="82" cy="86" r="4" fill="#22C55E"/>
+            <rect x="81" y="86" width="2" height="6" fill="#64748B"/>
+          </svg>
+
+          <span class="mono">02 / CONECTAR</span><h3>TRABAJAR<br>DESDE CASA.</h3>
+
+          <p>Trabajar desde casa con clientes de otros países.</p>
+
+        </article>
+
+        <article class="sueño sueño-mama" tabindex="0">
+
+          <img class="sueño-imagen foto-mama" src="foto-mama.png" alt="Gabriel de niño junto a su mamá durante su graduación">
+
+          <span class="mono">03 / AGRADECER</span><h3>MI MAMÁ.</h3>
+
+          <p>Comprarle una casa a mi mamá y viajar con ella.</p>
+
+        </article>
+
+      </div>
+
+      <div class="cierre">
+
+        <span class="mono">UNA FRASE PARA RECORDAR</span>
+
+        <p>EL QUE NO SUEÑA<br><span>NUNCA PROGRESA.</span></p>
+
+      </div>
+
+      <footer class="pie mono">
+
+        <span>GABRIEL / PROYECTO DE VIDA</span>
+
+        <a href="#inicio">VOLVER AL INICIO ↑</a>
+
+        <span>ARMENIA, QUINDÍO — COLOMBIA</span>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- Navegación móvil (toggle JS, unificado) -->
+
+  <nav class="menu-inferior" id="menu-movil" aria-label="Navegación móvil">
+
+    <a href="#inicio">INICIO</a><a href="#quien-soy">01 QUIÉN SOY</a>    <a href="#mi-carrera">02 MI CARRERA</a><a href="#ruta-academica">02b MI RUTA</a>
+
+    <a href="#por-que">03 POR QUÉ</a><a href="#camino">04 MI CAMINO</a><a href="#realidad">05 REALIDAD</a>
+
+    <a href="#futuro">06 FUTURO</a>
+
+  </nav>
+
+
+
+  <script>
+
+    (function () {
+
+      document.querySelectorAll('.porque-ruta-section .flip-card').forEach(function (card) {
+
+        card.addEventListener('click', function (e) {
+
+          if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'a') return;
+
+          card.classList.toggle('is-flipped');
+
+        });
+
+        card.setAttribute('tabindex', '0');
+
+        card.setAttribute('role', 'button');
+
+        card.addEventListener('keydown', function (e) {
+
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.classList.toggle('is-flipped'); }
+
+        });
+
+      });
+
+    })();
+
+  </script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B1120">
+  <title>GABRIEL — PROYECTO DE VIDA | 03 ¿POR QUÉ ELEGÍ ESTA CARRERA?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos específicos para Página 3: Fondo oscuro con alto contraste y tarjetas separadas */
+    body {
+      background-color: #0B1120;
+      color: #F1F5F9;
+      --bg-primary: #0B1120;
+      --text-primary: #F1F5F9;
+      --text-muted: #94A3B8;
+      --border-color: #1E293B;
+      --bg-card: #111827;
+    }
+
+    .reasons-header-area {
+      padding: 3.5rem 3rem 2.5rem 3rem;
+      border-bottom: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    /* Grid de tarjetas con espaciado real (gap) en lugar de pegadas */
+    .cards-section-wrapper {
+      padding: 3rem;
+      border-bottom: 1px solid var(--border-color);
+      background-color: #111827;
+    }
+
+    .flip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; /* Separación generosa */
+    }
+
+    /* Flip Card 3D container */
+    .flip-card {
+      min-height: 520px;
+      perspective: 1200px;
+      cursor: pointer;
+      position: relative;
+      outline: none;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    /* Activación del flip */
+    .flip-card.is-flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Lado Frontal y Lado Trasero */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.25rem;
+      box-sizing: border-box;
+      border: 1px solid var(--border-color);
+    }
+
+    .flip-card-front {
+      background-color: #111827;
+      color: #F1F5F9;
+      box-shadow: 0 2px 12px rgba(28, 23, 18, 0.04);
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .flip-card:hover .flip-card-front {
+      border-color: #3B82F6;
+      transform: translateY(-4px);
+    }
+
+    .flip-card-back {
+      background-color: #3B82F6;
+      color: #F1F5F9;
+      transform: rotateY(180deg);
+      border-color: #3B82F6;
+      box-shadow: 0 6px 24px rgba(184, 92, 42, 0.25);
+    }
+
+    .card-index-big {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      line-height: 1;
+      color: var(--color-red);
+    }
+
+    .flip-card-back .card-index-big {
+      color: #F1F5F9;
+      opacity: 0.35;
+    }
+
+    .front-visual {
+      width: 100%;
+      height: 130px;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0F172A;
+    }
+
+    .interactive-cue {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #64748B;
+      font-weight: 700;
+    }
+
+    .flip-card-back .interactive-cue {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      color: #F1F5F9;
+    }
+
+    /* Sección de Metas / Plan de vuelo */
+    .vision-manifesto-section {
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 4rem;
+      border-bottom: 1px solid var(--border-color);
+      background-color: #111827;
+      align-items: flex-start;
+    }
+
+    .plan-block {
+      background-color: #111827;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid #3B82F6;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.75rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .plan-block:hover {
+      border-color: #3B82F6;
+      border-left-color: #3B82F6;
+      transform: translateX(4px);
+    }
+
+    .plan-block:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 1050px) {
+      .flip-grid {
+        grid-template-columns: 1fr;
+      }
+      .flip-card {
+        min-height: 460px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .reasons-header-area {
+        grid-template-columns: 1fr;
+        padding: 2.25rem 1.5rem;
+        gap: 1.75rem;
+      }
+      .cards-section-wrapper {
+        padding: 1.75rem 1.25rem;
+      }
+      .vision-manifesto-section {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.5rem;
+        gap: 2rem;
+      }
+      .plan-block {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fondo-particulas" aria-hidden="true"></canvas
+
+  <!-- NAVEGACIÓN FIJA BRUTALISTA -->
+  <header class="site-header">
+    <a href="index.html" class="brand-block">GABRIEL // 16</a>
+    <button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
+    <button class="mobile-toggle" aria-expanded="false">[ MENÚ ☰ ]</button>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link"><span class="badge-num">01</span> QUIÉN SOY</a></li>
+      <li class="nav-item"><a href="carrera.html" class="nav-link"><span class="badge-num">02</span> MI CARRERA</a></li>
+      <li class="nav-item"><a href="por-que.html" class="nav-link active"><span class="badge-num">03</span> ¿POR QUÉ ESTA RUTA?</a></li>
+      <li class="nav-item"><a href="index.html" class="nav-link text-accent-red">INICIO ↺</a></li>
+    </ul>
+  </header>
+
+  <!-- SECCIÓN META SUPERIOR -->
+  <div class="section-meta-header">
+    <div style="display: flex; align-items: center;">
+      <span class="section-num">03</span>
+      <span class="text-mono">MOTIVACIONES Y PROYECTO DE VIDA</span>
+    </div>
+    <div class="section-line"></div>
+    <span class="text-mono">DECISIÓN ESTRATÉGICA A LOS 16 AÑOS</span>
+  </div>
+
+  <!-- ENCABEZADO DE SECCIÓN CON EXCELENTE ESPACIADO -->
+  <section class="reasons-header-area">
+    <div>
+      <div class="text-mono" style="color: var(--color-red); margin-bottom: 0.85rem; font-weight: 700;">
+        ELECCIÓN VOCACIONAL // REFLEXIÓN PERSONAL
+      </div>
+      <h1 class="hero-title title-large">
+        ¿POR QUÉ ELEGÍ<br>
+        <span class="text-accent-red">ESTA CARRERA?</span>
+      </h1>
+    </div>
+    <div>
+      <p style="font-size: 1.1rem; line-height: 1.75; color: #94A3B8; margin-bottom: 1.5rem;">
+        A mis 16 años, estudiar el Técnico en Programación de Software en el SENA es una decisión meditada: la tecnología es la herramienta con mayor poder de crecimiento personal, independencia temprana e impacto positivo para transformar la realidad de nuestro entorno en Armenia y el Quindío.
+      </p>
+      <div class="text-mono" style="color: #3B82F6; font-size: 0.8rem; font-weight: 700; background: rgba(59, 130, 246, 0.12); padding: 0.6rem 1rem; border: 1px solid rgba(59, 130, 246, 0.4); display: inline-block;">
+        [ ↷ ] HAZ CLIC EN CUALQUIER TARJETA PARA VOLTEARLA Y LEER EL ANÁLISIS COMPLETO
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE TARJETAS FLIP 3D CON ESPACIO CLARO ENTRE ELLAS -->
+  <section class="cards-section-wrapper">
+    <main class="flip-grid">
+
+      <!-- Tarjeta 1: Capacidad de Creación -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Cara Frontal -->
+          <div class="flip-card-front">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="card-index-big">01</span>
+                <span class="text-mono" style="color: #64748B;">CREACIÓN PURA</span>
+              </div>
+              
+              <div class="front-visual dot-texture-red">
+                <div class="hero-title" style="font-size: 2.2rem; color: #F1F5F9;">0 &rarr; 1 CÓDIGO</div>
+              </div>
+
+              <h2 class="title-card" style="margin-bottom: 0.85rem; color: #F1F5F9;">CREAR DESDE LA NADA</h2>
+              <p style="font-size: 1.02rem; color: #94A3B8; line-height: 1.65;">
+                La programación es la única disciplina donde con una computadora y lógica puedes crear herramientas que solucionen necesidades reales sin depender de materiales costosos.
+              </p>
+            </div>
+
+            <div class="interactive-cue">
+              <span>[ CLIC PARA VOLTEAR ]</span>
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; font-size: 0.95rem;">↺</div>
+            </div>
+          </div>
+
+          <!-- Cara Trasera -->
+          <div class="flip-card-back">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="card-index-big">01</span>
+                <span class="text-mono" style="color: #F1F5F9; font-weight: 700;">MI ANÁLISIS</span>
+              </div>
+              <h3 class="title-card" style="margin: 1.5rem 0 1rem 0; color: #F1F5F9;">AUTONOMÍA Y PODER CREADOR</h3>
+              <p style="font-size: 1.02rem; line-height: 1.7; color: #F1F5F9;">
+                A diferencia de otras materias donde el aprendizaje es puramente teórico, en el SENA cada línea de código tiene un resultado visible en pantalla. Si diseño un sistema para que un negocio de Armenia controle sus ventas, puedo construirlo de inicio a fin con mis propias manos.
+              </p>
+            </div>
+
+            <div class="interactive-cue">
+              <span>VOLVER AL FRENTE</span>
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; background: #fff; color: var(--color-red); font-size: 0.95rem;">↺</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Demanda y Futuro Real -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Cara Frontal -->
+          <div class="flip-card-front">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="card-index-big">02</span>
+                <span class="text-mono" style="color: #64748B;">MERCADO ACTUAL</span>
+              </div>
+
+              <div class="front-visual dot-texture">
+                <div class="hero-title" style="font-size: 2.2rem; color: var(--color-red);">FUTURO LABORAL</div>
+              </div>
+
+              <h2 class="title-card" style="margin-bottom: 0.85rem; color: #F1F5F9;">DEMANDA REAL EN EL MERCADO</h2>
+              <p style="font-size: 1.02rem; color: #94A3B8; line-height: 1.65;">
+                El mundo funciona sobre software. El sector tecnológico cuenta con amplia demanda de desarrolladores bien capacitados, permitiendo trabajar de forma remota y con estabilidad.
+              </p>
+            </div>
+
+            <div class="interactive-cue">
+              <span>[ CLIC PARA VOLTEAR ]</span>
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; font-size: 0.95rem;">↺</div>
+            </div>
+          </div>
+
+          <!-- Cara Trasera -->
+          <div class="flip-card-back">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="card-index-big">02</span>
+                <span class="text-mono" style="color: #F1F5F9; font-weight: 700;">MI PLAN</span>
+              </div>
+              <h3 class="title-card" style="margin: 1.5rem 0 1rem 0; color: #F1F5F9;">INDEPENDENCIA TEMPRANA</h3>
+              <p style="font-size: 1.02rem; line-height: 1.7; color: #F1F5F9;">
+                Tener el título técnico del SENA al terminar el colegio me abre las puertas a contratos de aprendizaje remunerados antes de los 18 años. Esto me permite financiar mi carrera universitaria en Ingeniería de Sistemas sin ser una carga económica para mi familia.
+              </p>
+            </div>
+
+            <div class="interactive-cue">
+              <span>VOLVER AL FRENTE</span>
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; background: #fff; color: var(--color-red); font-size: 0.95rem;">↺</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Resolver Problemas Reales -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Cara Frontal -->
+          <div class="flip-card-front">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="card-index-big">03</span>
+                <span class="text-mono" style="color: #64748B;">IMPACTO SOCIAL</span>
+              </div>
+
+              <div class="front-visual dot-texture-red">
+                <div class="hero-title" style="font-size: 2.2rem; color: #F1F5F9;">ARMENIA TI</div>
+              </div>
+
+              <h2 class="title-card" style="margin-bottom: 0.85rem; color: #F1F5F9;">RESOLVER PROBLEMAS EN EL QUINDÍO</h2>
+              <p style="font-size: 1.02rem; color: #94A3B8; line-height: 1.65;">
+                Aprender a programar enseña a pensar con método y lógica para descomponer dificultades complejas y crear soluciones aplicables a la vida cotidiana.
+              </p>
+            </div>
+
+            <div class="interactive-cue">
+              <span>[ CLIC PARA VOLTEAR ]</span>
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; font-size: 0.95rem;">↺</div>
+            </div>
+          </div>
+
+          <!-- Cara Trasera -->
+          <div class="flip-card-back">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="card-index-big">03</span>
+                <span class="text-mono" style="color: #F1F5F9; font-weight: 700;">COMPROMISO</span>
+              </div>
+              <h3 class="title-card" style="margin: 1.5rem 0 1rem 0; color: #F1F5F9;">INNOVACIÓN REGIONAL</h3>
+              <p style="font-size: 1.02rem; line-height: 1.7; color: #F1F5F9;">
+                El Quindío es reconocido por el café y el turismo, pero necesita dar un salto tecnológico. Mi meta es aplicar el software para optimizar procesos agrícolas, comerciales y educativos en mi ciudad, demostrando el talento joven de nuestra región.
+              </p>
+            </div>
+
+            <div class="interactive-cue">
+              <span>VOLVER AL FRENTE</span>
+              <div class="btn-round-arrow" style="width: 38px; height: 38px; min-width: 38px; background: #fff; color: var(--color-red); font-size: 0.95rem;">↺</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </section>
+
+  <!-- METAS CONCRETAS: PLAN DE VUELO CON MÁXIMA CLARIDAD PARA LOS DOCENTES -->
+  <section class="vision-manifesto-section">
+    <div>
+      <div class="text-mono" style="color: var(--color-red); margin-bottom: 0.75rem; font-weight: 700;">
+        HOJA DE RUTA DETALLADA
+      </div>
+      <h2 class="hero-title title-large" style="line-height: 1.05;">
+        PLAN DE VUELO<br>
+         <span class="text-accent-red">2025 &mdash; 2031</span>
+      </h2>
+      <p style="color: #94A3B8; font-size: 1.05rem; margin-top: 1.25rem; line-height: 1.7;">
+        Un proyecto de vida sólo es serio y evaluable cuando se estructura en compromisos con fechas, metas académicas y resultados observables.
+      </p>
+    </div>
+
+    <div>
+      <!-- Meta 1 -->
+      <div class="plan-block">
+        <div class="text-mono" style="color: var(--color-red); margin-bottom: 0.5rem; font-weight: 700;">
+          CORTO PLAZO // 16 A 17 AÑOS (ACTUAL)
+        </div>
+        <h3 class="title-card" style="margin-bottom: 0.6rem; color: #F1F5F9;">
+          GRADUACIÓN DE BACHILLERATO &amp; TÍTULO TÉCNICO SENA
+        </h3>
+        <p style="color: #94A3B8; font-size: 1rem; line-height: 1.7;">
+          Completar con excelencia los resultados de aprendizaje del programa, presentar el proyecto productivo de software para el colegio y realizar la etapa de práctica laboral en una empresa formal del sector.
+        </p>
+      </div>
+
+      <!-- Meta 2 -->
+      <div class="plan-block">
+        <div class="text-mono" style="color: #64748B; margin-bottom: 0.5rem; font-weight: 700;">
+          MEDIANO PLAZO // 18 A 20 AÑOS
+        </div>
+        <h3 class="title-card" style="margin-bottom: 0.6rem; color: #F1F5F9;">
+          HOMOLOGACIÓN A INGENIERÍA &amp; PRIMEROS EMPLEOS FORMALES
+        </h3>
+        <p style="color: #94A3B8; font-size: 1rem; line-height: 1.7;">
+          Aprovechar el convenio SENA - Universidad para homologar materias en Ingeniería de Sistemas en Armenia, desempeñándome al mismo tiempo como programador Junior para costear mis estudios y consolidar mi portafolio.
+        </p>
+      </div>
+
+      <!-- Meta 3 -->
+      <div class="plan-block">
+        <div class="text-mono" style="color: #64748B; margin-bottom: 0.5rem; font-weight: 700;">
+          LARGO PLAZO // 21 AÑOS EN ADELANTE
+        </div>
+        <h3 class="title-card" style="margin-bottom: 0.6rem; color: #F1F5F9;">
+          LIDERAZGO TÉCNICO &amp; EMPRENDIMIENTO EN EL QUINDÍO
+        </h3>
+        <p style="color: #94A3B8; font-size: 1rem; line-height: 1.7;">
+          Alcanzar el nivel de desarrollador Senior / Arquitecto de Software, participar en proyectos internacionales y crear soluciones tecnológicas que generen empleo para nuevos egresados en el Quindío.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER DE NAVEGACIÓN ENTRE PÁGINAS -->
+  <footer class="page-navigation-footer">
+    <a href="carrera.html" class="nav-bottom-item">
+      <div class="nav-bottom-info">
+        <span>CAPÍTULO PREVIO</span>
+        <strong>← 02 // MI CARRERA TÉCNICA</strong>
+      </div>
+      <div class="btn-round-arrow" style="transform: rotate(180deg);">→</div>
+    </a>
+    <a href="index.html" class="nav-bottom-item">
+      <div class="nav-bottom-info">
+        <span>VOLVER AL PRINCIPIO</span>
+        <strong>01 // QUIÉN SOY (PORTADA)</strong>
+      </div>
+      <div class="btn-round-arrow">↺</div>
+    </a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
